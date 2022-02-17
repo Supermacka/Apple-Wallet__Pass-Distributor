@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryEvent.MobileTicket.AppleWallet.Library", "EntryEvent.MobileTicket.AppleWallet.Library\EntryEvent.MobileTicket.AppleWallet.Library.csproj", "{408D8C9C-3BAF-4ED3-86C1-993089D90396}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryEvent.MobileTicket.AppleWallet.Api", "EntryEvent.MobileTicket.AppleWallet.Api\EntryEvent.MobileTicket.AppleWallet.Api.csproj", "{207D61FE-3C19-44DD-B0BC-B8B6FBDCC4CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryEvent.MobileTicket.AppleWallet.Console", "EntryEvent.MobileTicket.AppleWallet.Console\EntryEvent.MobileTicket.AppleWallet.Console.csproj", "{3699F1E0-A7A7-475B-B45B-1B28AE244097}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{408D8C9C-3BAF-4ED3-86C1-993089D90396}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408D8C9C-3BAF-4ED3-86C1-993089D90396}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408D8C9C-3BAF-4ED3-86C1-993089D90396}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408D8C9C-3BAF-4ED3-86C1-993089D90396}.Release|Any CPU.Build.0 = Release|Any CPU
+		{207D61FE-3C19-44DD-B0BC-B8B6FBDCC4CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{207D61FE-3C19-44DD-B0BC-B8B6FBDCC4CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{207D61FE-3C19-44DD-B0BC-B8B6FBDCC4CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{207D61FE-3C19-44DD-B0BC-B8B6FBDCC4CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3699F1E0-A7A7-475B-B45B-1B28AE244097}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3699F1E0-A7A7-475B-B45B-1B28AE244097}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3699F1E0-A7A7-475B-B45B-1B28AE244097}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3699F1E0-A7A7-475B-B45B-1B28AE244097}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

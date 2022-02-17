@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fI7sujXwZrvbI/iYqb1QV5KnB1fScRUftedG/IYBqZg=",
+  "Source": "EntryEvent.MobileTicket.AppleWallet",
+  "BasePath": "_content/EntryEvent.MobileTicket.AppleWallet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

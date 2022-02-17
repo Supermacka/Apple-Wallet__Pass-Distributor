@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "Z/L/Qsrw2wxnpjbis4NBw2JjZmo5Kr3GrDVTDHgjZjtyF0vufAui24rBoWav65xaRXGTDAKOYHgGMrcovkpIpA==",
+  "success": true,
+  "projectFilePath": "/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/EntryEvent.MobileTicket.AppleWallet.Api/EntryEvent.MobileTicket.AppleWallet.Api.csproj",
+  "expectedPackageFiles": [
+    "/Users/colinfarkas/.nuget/packages/dotnet-passbook/3.0.1/dotnet-passbook.3.0.1.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/system.security.cryptography.pkcs/4.5.2/system.security.cryptography.pkcs.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
