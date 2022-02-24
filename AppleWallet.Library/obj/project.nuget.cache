@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "lbazvzx91FB7stQjdpLQofOj4odnAcncAVCa+hsxeZqABdeOORSFED1iEbhYQbyEWUqbceBiEpQyc5TpfwbLMw==",
+  "success": true,
+  "projectFilePath": "/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/AppleWallet.Library.csproj",
+  "expectedPackageFiles": [
+    "/Users/colinfarkas/.nuget/packages/dotnet-passbook/3.0.1/dotnet-passbook.3.0.1.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "/Users/colinfarkas/.nuget/packages/system.security.cryptography.pkcs/4.5.2/system.security.cryptography.pkcs.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}

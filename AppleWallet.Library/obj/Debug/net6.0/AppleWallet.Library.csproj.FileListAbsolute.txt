@@ -1,0 +1,12 @@
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/bin/Debug/net6.0/AppleWallet.Library.deps.json
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/bin/Debug/net6.0/AppleWallet.Library.dll
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/bin/Debug/net6.0/ref/AppleWallet.Library.dll
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/bin/Debug/net6.0/AppleWallet.Library.pdb
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/AppleWallet.Library.csproj.AssemblyReference.cache
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/AppleWallet.Library.GeneratedMSBuildEditorConfig.editorconfig
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/AppleWallet.Library.AssemblyInfoInputs.cache
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/AppleWallet.Library.AssemblyInfo.cs
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/AppleWallet.Library.csproj.CoreCompileInputs.cache
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/AppleWallet.Library.dll
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/ref/AppleWallet.Library.dll
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/obj/Debug/net6.0/AppleWallet.Library.pdb

@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryEvent.MobileTicket.AppleWallet.Library", "EntryEvent.MobileTicket.AppleWallet.Library\EntryEvent.MobileTicket.AppleWallet.Library.csproj", "{408D8C9C-3BAF-4ED3-86C1-993089D90396}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleWallet.Library", "AppleWallet.Library\AppleWallet.Library.csproj", "{408D8C9C-3BAF-4ED3-86C1-993089D90396}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryEvent.MobileTicket.AppleWallet.Api", "EntryEvent.MobileTicket.AppleWallet.Api\EntryEvent.MobileTicket.AppleWallet.Api.csproj", "{207D61FE-3C19-44DD-B0BC-B8B6FBDCC4CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleWallet.Api", "AppleWallet.Api\AppleWallet.Api.csproj", "{207D61FE-3C19-44DD-B0BC-B8B6FBDCC4CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntryEvent.MobileTicket.AppleWallet.Console", "EntryEvent.MobileTicket.AppleWallet.Console\EntryEvent.MobileTicket.AppleWallet.Console.csproj", "{3699F1E0-A7A7-475B-B45B-1B28AE244097}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppleWallet.Console", "AppleWallet.Console\AppleWallet.Console.csproj", "{3699F1E0-A7A7-475B-B45B-1B28AE244097}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
