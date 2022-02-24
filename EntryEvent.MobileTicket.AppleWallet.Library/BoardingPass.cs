@@ -6,6 +6,8 @@ namespace EntryEvent.MobileTicket.AppleWallet.Library;
 
 public static class BoardingPass
 {
+    private static string CurrentPathImages { get; set; } =
+        @"/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/EntryEvent.MobileTicket.AppleWallet.Library/Images/Tosselilla/";
     public static byte[] Create()
     {
         PassGenerator generator = new PassGenerator();
@@ -17,6 +19,7 @@ public static class BoardingPass
         request.Description = "My first pass";
         request.OrganizationName = "Tomas McGuinness";
         request.LogoText = "My Pass";
+        request.WebServiceUrl = "https://example.com/";
         
         request.BackgroundColor = "rgb(255,255,255)";
         request.LabelColor = "rgb(0,0,0)";
@@ -26,9 +29,13 @@ public static class BoardingPass
         request.AppleWWDRCACertificate = new X509Certificate2(@"/Users/colinfarkas/Desktop/AppleWWDRCA.cer");
         request.PassbookCertificate = new X509Certificate2(@"/Users/colinfarkas/Desktop/Certificate.p12", "Pannkakor12Cert");
         
-        // Logo (TODO: Icon not working?)
-        request.Images.Add(PassbookImage.Icon, File.ReadAllBytes(@"/Users/colinfarkas/Desktop/icon.png"));
-        request.Images.Add(PassbookImage.Icon2X, File.ReadAllBytes(@"/Users/colinfarkas/Desktop/icon@2x.png"));
+        // Icon *REQUIRED (shows on notification)
+        request.Images.Add(PassbookImage.Icon, File.ReadAllBytes(CurrentPathImages + @"icon.png"));
+        request.Images.Add(PassbookImage.Icon2X, File.ReadAllBytes(CurrentPathImages + @"icon@2x.png"));
+        
+        // Logo (top left corner)
+        request.Images.Add(PassbookImage.Logo, File.ReadAllBytes(CurrentPathImages + @"logo.png"));
+        request.Images.Add(PassbookImage.Logo2X, File.ReadAllBytes(CurrentPathImages + @"logo@2x.png"));
         
         request.Style = PassStyle.BoardingPass;
 

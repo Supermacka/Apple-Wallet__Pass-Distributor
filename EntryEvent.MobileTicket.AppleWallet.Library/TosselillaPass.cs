@@ -8,7 +8,7 @@ public static class TosselillaPass
 {
     private static string CurrentPathImages { get; set; } =
         @"/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/EntryEvent.MobileTicket.AppleWallet.Library/Images/Tosselilla/";
-    public static byte[] Create()
+    public static byte[] Create(string serialNumber)
     {
         PassGenerator generator = new PassGenerator();
     
@@ -17,11 +17,12 @@ public static class TosselillaPass
         // Toplevel Keys
         request.PassTypeIdentifier = TopLevelKeys.PassTypeIdentifier; 
         request.TeamIdentifier = TopLevelKeys.TeamIdentifier;
+        request.WebServiceUrl = "https://example.com/";
         
-        request.SerialNumber = "121212";
+        request.SerialNumber = serialNumber;
         request.Description = "Entrébiljett till Tosselilla nöjespark";
         request.OrganizationName = "Toselilla Nöjespark Skåne";
-        request.LogoText = "Toselilla";
+        request.LogoText = "Tosselilla";
         request.HeaderFields.Add(new StandardField("entry-date", "10:00-17:00", "04/08-22"));
 
         // Design
@@ -33,6 +34,11 @@ public static class TosselillaPass
         request.AppleWWDRCACertificate = new X509Certificate2(@"/Users/colinfarkas/Desktop/AppleWWDRCA.cer");
         request.PassbookCertificate = new X509Certificate2(@"/Users/colinfarkas/Desktop/Certificate.p12", "Pannkakor12Cert");
 
+        // Updatable
+        // TODO: Create individual authToken (per pass)
+        request.AuthenticationToken = "vxwxd7J8AlNNFPS8k0a0FfUFtq0ewzFdc";
+        request.WebServiceUrl = "https://localhost:7161/Passes/";
+        
         // Icon *REQUIRED (shows on notification)
         request.Images.Add(PassbookImage.Icon, File.ReadAllBytes(CurrentPathImages + @"icon.png"));
         request.Images.Add(PassbookImage.Icon2X, File.ReadAllBytes(CurrentPathImages + @"icon@2x.png"));
