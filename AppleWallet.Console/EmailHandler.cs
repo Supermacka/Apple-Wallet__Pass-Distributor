@@ -9,11 +9,11 @@ namespace AppleWallet.Console;
 public static class EmailHandler
 {
     private const string FromEmail = "supermacka12@gmail.com";
-    private const string FromDisplayName = "Colin";
+    private const string FromDisplayName = "Colin Ticket Master";
     private const string Password = "Pannkakor";
 
-    private const string ToEmail = "supermacka12@gmail.com";
-    private const string ToDisplayName = "Colin";
+    private const string ToEmail = "robertbengtsson229@gmail.com ";
+    private const string ToDisplayName = "Tobert";
     
     public static void Send(byte[] responseData)
     {
@@ -23,7 +23,7 @@ public static class EmailHandler
             var toAddress = new MailAddress(ToEmail, ToDisplayName);
             const string fromPassword = Password;
             
-            const string subject = "Tosselilla Biljett";
+            const string subject = "ALV Biljett";
             const string body = "Tack för ditt köp!";
             
             var smtp = new SmtpClient
@@ -42,7 +42,7 @@ public static class EmailHandler
                 Attachments = { 
                     new Attachment(
                         new MemoryStream(responseData, false), 
-                        "file.pkpass", "application/vnd.apple.pkpass") 
+                        "ALV-biljett.pkpass", "application/vnd.apple.pkpass") 
                 },
             };
 

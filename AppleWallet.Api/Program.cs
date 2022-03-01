@@ -1,4 +1,5 @@
 using AppleWallet.Api.Repositories;
+using AppleWallet.Library;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddSingleton<IRegistrations, Registrations>();
+builder.Services.AddSingleton<IFileHandler, FileHandler>();
+builder.Services.AddSingleton<IOneTimeUsePass, OneTimeUsePass>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -29,3 +29,5 @@
 /Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Api/obj/Debug/net6.0/ref/AppleWallet.Api.dll
 /Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Api/obj/Debug/net6.0/AppleWallet.Api.pdb
 /Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Api/obj/Debug/net6.0/AppleWallet.Api.genruntimeconfig.cache
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Api/bin/Debug/net6.0/Microsoft.DotNet.PlatformAbstractions.dll
+/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Api/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll

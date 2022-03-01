@@ -1,9 +1,11 @@
 using AppleWallet.Api.Entities;
+using AppleWallet.Library;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AppleWallet.Api.Repositories;
 
 public interface IRegistrations
 {
-    public byte[] CreatePass(string passType); // TODO: pathToLogotype, companyName, tickets
+    public FileContentResult CreatePass(string companyName, ImagePaths imagePaths, PassFieldData[] passFieldsData);
     public Pass? GetPass(string passTypeId, string serialNumber);
 }

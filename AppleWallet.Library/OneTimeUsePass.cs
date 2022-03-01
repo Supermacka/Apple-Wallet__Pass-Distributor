@@ -4,11 +4,12 @@ using Passbook.Generator.Fields;
 
 namespace AppleWallet.Library;
 
-public static class TosselillaPass
+public class OneTimeUsePass : IOneTimeUsePass
 {
     private static string CurrentPathImages { get; set; } =
         @"/Users/colinfarkas/RiderProjects/EntryEvent.MobileTicket.AppleWallet/AppleWallet.Library/Images/Tosselilla/";
-    public static byte[] Create(string serialNumber)
+
+    public byte[] Create(string companyName, ImagePaths imagePaths, PassFieldData passData)
     {
         PassGenerator generator = new PassGenerator();
     
@@ -23,16 +24,16 @@ public static class TosselillaPass
         request.AuthenticationToken = "vxwxd7J8AlNNFPS8k0a0FfUFtq0ewzFdc";
         request.WebServiceUrl = "https://localhost:7161/Passes/";
 
-        request.SerialNumber = serialNumber;
-        request.Description = "Entrébiljett till Astrid Lindgrens Värld";
-        request.OrganizationName = "Astrid Lindgrens Värld";
-        request.LogoText = ""; // TODO: Check space
+        request.SerialNumber = passData.BarcodeData.SerialNumber;
+        request.Description = passData.Description;
+        request.OrganizationName = companyName;
+        request.LogoText = passData.LogoText; // TODO: PROBLEM! Logo takes too much space
         request.HeaderFields.Add(new StandardField("entry-date", "10:00-17:00", "04/08-22"));
 
         // Design
-        request.BackgroundColor = "rgb(255,255,60)";
-        request.LabelColor = "rgb(45,45,45)";
-        request.ForegroundColor = "rgb(0,0,0)";
+        request.BackgroundColor = passData.Colors.BakgoundColor;
+        request.LabelColor = passData.Colors.LabelColor;
+        request.ForegroundColor = passData.Colors.BakgoundColor;
 
         // Certification
         request.AppleWWDRCACertificate = new X509Certificate2(@"/Users/colinfarkas/Desktop/AppleWWDRCA.cer");
@@ -52,11 +53,12 @@ public static class TosselillaPass
         
         request.Style = PassStyle.EventTicket;
 
-        request.AddSecondaryField(new StandardField("pass-name", "", "Tosselilla Nöjespark"));
+        request.AddSecondaryField(new StandardField("pass-name", "", passData.Title));
         
-        request.AddAuxiliaryField(new StandardField("pass-type", "Biljett", "Dagsentré (1dag)"));
-        request.AddAuxiliaryField(new StandardField("pass-owner-name", "Ägare", "Colin Farkas"));
+        request.AddAuxiliaryField(new StandardField("pass-type", "Biljett", passData.PassType));
+        // request.AddAuxiliaryField(new StandardField("pass-owner-name", "Ägare", "Colin Farkas"));
 
+        // TODO: Implement QR validation
         request.AddBarcode(BarcodeType.PKBarcodeFormatQR, "https://www.youtube.com/watch?v=dQw4w9WgXcQ", "ISO-8859-1", "46R1C3K52 96R0L1L57");
 
         byte[] generatedPass = generator.Generate(request);

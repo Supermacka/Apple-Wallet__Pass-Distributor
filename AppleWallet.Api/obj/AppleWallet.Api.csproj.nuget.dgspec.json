@@ -103,6 +103,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "dotnet-passbook": {
               "target": "Package",
               "version": "[3.0.1, )"

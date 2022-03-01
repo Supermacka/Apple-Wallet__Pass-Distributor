@@ -1,33 +1,43 @@
 using AppleWallet.Api.Entities;
 using AppleWallet.Library;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AppleWallet.Api.Repositories;
 
 public class Registrations : IRegistrations
 {
-    private readonly List<Device> _devices = new() { };
-    private readonly List<Pass> _passes = new() { };
-    
-    // TODO: Function for adding new passes
-    // Should create the correct pass based on parameter input
-    public byte[] CreatePass(string passType)
+    private readonly IOneTimeUsePass _oneTimeUse;
+
+    private readonly IFileHandler _fileHandler;
+    // private readonly List<Device> _devices = new() { };
+    // private readonly List<Pass> passes = new() { };
+
+    public Registrations(IOneTimeUsePass oneTimeUse, IFileHandler fileHandler)
     {
-        var serialNumber = Guid.NewGuid().ToString();
-
-        _passes.Add(new Pass()
+        this._oneTimeUse = oneTimeUse;
+        this._fileHandler = fileHandler;
+    }
+    
+    public FileContentResult CreatePass(string companyName, ImagePaths imagePaths, PassFieldData[] passFieldsData)
+    {
+        var passList = new List<byte[]>();
+        foreach (var passData in passFieldsData)
         {
-            Id = Guid.NewGuid(),
-            PassTypeId = TopLevelKeys.PassTypeIdentifier,
-            SerialNumber = serialNumber,
-            LastUpdated = DateTime.Now,
-        });
+            var pass = _oneTimeUse.Create(companyName, imagePaths, passData);
+            passList.Add(pass);
+        }
 
-        return TosselillaPass.Create(serialNumber);
+        var passes = _fileHandler.GetFile(passList);
+        return passes;
     }
 
     public Pass? GetPass(string passTypeId, string serialNumber)
     {
-        return _passes.Where((p) => p.PassTypeId == passTypeId && p.SerialNumber == serialNumber).FirstOrDefault();
+        // return _passes.Where((p) => p.PassTypeId == passTypeId && p.SerialNumber == serialNumber).FirstOrDefault();
+        return new Pass()
+        {
+
+        };
     }
     
 }

@@ -1,5 +1,4 @@
 using AppleWallet.Api.Repositories;
-using AppleWallet.Api.Entities;
 using Microsoft.AspNetCore.Mvc;
 using AppleWallet.Library;
 
@@ -17,11 +16,11 @@ public class PassesController : ControllerBase
         this._registrations = registrations;
     }
     
-    [Route("{passType}")]
+    [Route("{companyName}")]
     [HttpGet]
-    public FileContentResult Get(string passType)
+    public FileContentResult Get(string companyName, PassData passData)
     {
-        return new FileContentResult(_registrations.CreatePass(passType), "application/vnd.apple.pkpass");
+        return _registrations.CreatePass(companyName, passData.ImagePaths, passData.PassFieldData);
     }
     
     // [Route("{version}/devices/{deviceLibraryId}/registrations/{passTypeId}/{serialNumber}")]
